@@ -1,0 +1,19 @@
+{
+  "name": "jsonscript",
+  "version": "1.0.0",
+  "description": "Run sandboxed code specified as javascript objects.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/martingronlund/jsonscript.git"
+  },
+  "author": "martingronlund@live.se",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/martingronlund/jsonscript/issues"
+  },
+  "homepage": "https://github.com/martingronlund/jsonscript#readme"
+}
