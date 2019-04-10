@@ -1,18 +1,26 @@
 # jsonscript
 Run sandboxed code specified as javascript objects.
 
-## Usage
+## 🔮 Usage
 
-Exports three properties,
+Exports three properties;
 
-### runExpression
+### runExpression (expression, references, functions)
 
 ```js
 runExpression('add(a, 2)', { a: 3 }) // 5
-runExpression('foo(add(a, 2))', { a: 3 }, { ...defaultFunctions, foo: x => x * 2}) // 10
+
+runExpression(
+  'foo(add(a, 2))',
+  { a: 3 },
+  {
+    ...defaultFunctions,
+    foo: x => x * 2
+  }
+) // 10
 ```
 
-### runProgram
+### runProgram (program, references, functions)
 
 ```js
 runProgram({
@@ -26,6 +34,7 @@ runProgram({
 ### defaultFunctions
 
 ```js
+{
   add: (...args) => args.reduce((a, b) => a + b, 0),
   and: (...args) => args.reduce((a, b) => a && b, true),
   at: (x, i) => x[i],
@@ -60,4 +69,5 @@ runProgram({
   toLowerCase: (str) => str.toLowerCase(),
   toUpperCase: (str) => str.toUpperCase(),
   valueOf: (date) => date.valueOf()
+}
 ```
